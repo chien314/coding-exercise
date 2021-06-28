@@ -18,3 +18,4 @@ class Solution(object):
             if node:
                 q.put((node.val, node)) ## note: put tuple in 
         return head.next 
+ 
