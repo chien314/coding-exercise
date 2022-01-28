@@ -1,4 +1,4 @@
-# TC:O()
+# TC
 class Solution1(object):
     def mergeKLists(self, lists):
         self.nodes = []
@@ -12,7 +12,7 @@ class Solution1(object):
             point = point.next
         return head.next
 
-    
+
 from queue import PriorityQueue
 class Solution2(object):
     def mergeKLists(self, lists):
