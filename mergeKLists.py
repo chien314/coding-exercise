@@ -1,6 +1,20 @@
-from queue import PriorityQueue
+# TC:O()
+class Solution1(object):
+    def mergeKLists(self, lists):
+        self.nodes = []
+        head = point = ListNode(0)
+        for l in lists:
+            while l:
+                self.nodes.append(l.val)
+                l = l.next
+        for x in sorted(self.nodes):
+            point.next = ListNode(x)
+            point = point.next
+        return head.next
 
-class Solution(object):
+    
+from queue import PriorityQueue
+class Solution2(object):
     def mergeKLists(self, lists):
 
         head = point = ListNode(0)
@@ -19,16 +33,35 @@ class Solution(object):
                 q.put((node.val, node)) ## note: put tuple in 
         return head.next 
  
-  
-class Solution(object):
+ 
+    
+class Solution3(object):
     def mergeKLists(self, lists):
-        self.nodes = []
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        amount = len(lists)
+        interval = 1
+        while interval < amount:
+            for i in range(0, amount - interval, interval * 2):
+                lists[i] = self.merge2Lists(lists[i], lists[i + interval])
+            interval *= 2
+        return lists[0] if amount > 0 else None
+
+    def merge2Lists(self, l1, l2):
         head = point = ListNode(0)
-        for l in lists:
-            while l:
-                self.nodes.append(l.val)
-                l = l.next
-        for x in sorted(self.nodes):
-            point.next = ListNode(x)
+        while l1 and l2:
+            if l1.val <= l2.val:
+                point.next = l1
+                l1 = l1.next
+            else:
+                point.next = l2
+                l2 = l1
+                l1 = point.next.next
             point = point.next
-        return head.next
+        if not l1:
+            point.next=l2
+        else:
+            point.next=l1
+        return head.next    
