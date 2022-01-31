@@ -1,4 +1,4 @@
-# TC
+# TC 
 class Solution1(object):
     def mergeKLists(self, lists):
         self.nodes = []
