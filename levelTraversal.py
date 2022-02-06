@@ -37,7 +37,7 @@ class Solution:
         helper(root, 0)
         return levels    
 
-#     Method 2, iteration: suing queue
+#     Method 2, iteration: using queue
 from collections import deque
 class Solution:
     def levelOrder(self, root):
