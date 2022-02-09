@@ -1,5 +1,5 @@
 # Method 1. Recursion
-# TC:O(n)
+# TC:O(n) 
 # SC:O(n)
 # start with this one-node example
 class Solution:
