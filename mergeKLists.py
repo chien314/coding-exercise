@@ -1,4 +1,7 @@
-# TC   
+# merge n unsorted lists
+# TC: O(n+nlogn)
+# SC: O(n)
+# brute force
 class Solution1(object):
     def mergeKLists(self, lists):
         self.nodes = []
@@ -12,7 +15,9 @@ class Solution1(object):
             point = point.next
         return head.next
 
-
+#heap
+# TC: O(nlogn)
+# SC: O(n)
 from queue import PriorityQueue
 class Solution2(object):
     def mergeKLists(self, lists):
@@ -37,10 +42,7 @@ class Solution2(object):
     
 class Solution3(object):
     def mergeKLists(self, lists):
-        """
-        :type lists: List[ListNode]
-        :rtype: ListNode
-        """
+        
         amount = len(lists)
         interval = 1
         while interval < amount:
