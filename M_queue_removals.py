@@ -1,5 +1,5 @@
-TC:O(x^2)
-SC:O(n)
+# TC:O(x^2) # find max val in a queue of size x for x iteration
+# SC:O(n) # create a queue of tuples (n,i)
 
 import math
 from collections import deque 
