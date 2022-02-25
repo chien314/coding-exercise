@@ -4,37 +4,37 @@
 # start with this one-node example
 class Solution:
     def levelOrder(self, root):
-        levels=[]
+        res=[]
         
         def helper(node, level):
             if not node:
                 return 
  
-            levels.append([])
+            res.append([])
                 
-            levels[level].append(node.val)            
+            res[level].append(node.val)            
         
         helper(root, 0)
-        return levels
+        return res
         
 # full solution        
 class Solution:
     def levelOrder(self, root):
-        levels=[]
+        res=[]
         
         def helper(node, level):
             if not node:
                 return 
-            if len(levels) == level:
-                levels.append([])
+            if len(res) == level:
+                res.append([])
                 
-            levels[level].append(node.val)
+            res[level].append(node.val)
             
             helper(node.left, level+1)
             helper(node.right, level+1)
                    
         helper(root, 0)
-        return levels    
+        return res    
 
 #     Method 2, iteration: using queue
 from collections import deque
