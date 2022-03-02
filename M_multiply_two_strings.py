@@ -4,7 +4,7 @@
 # TC:O(m*n)
 # SC:O(m+n)
 
-def mulStrings(s1, s2):
+def mulStrings(s1, s2): 
     
     s1 = s1[::-1]
     s2 = s2[::-1]
