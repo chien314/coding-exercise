@@ -29,7 +29,6 @@ class Solution2(object):
                 q.put((l.val, l))
 
         while not q.empty():
-#             cnt+=1
             val, node = q.get()
             point.next = ListNode(val)
             point = point.next
