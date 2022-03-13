@@ -11,7 +11,7 @@ def MWS(s,t):
       lent -= dic[c] > 0     # dic(t)-dic(s)
       dic[c] -= 1
       if lent==0:
-          while dic[s[i]] < 0: # i<j?
+          while i<j and dic[s[i]] < 0: # i<j?
               dic[s[i]] += 1
               i += 1
           if J==0 or j - i <= J - I:
