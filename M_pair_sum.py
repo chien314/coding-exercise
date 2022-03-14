@@ -12,6 +12,6 @@ def numberOfWays(arr, k):
       sum = k - c
       if sum in hashmap:
         total += hashmap[sum]
-      hashmap[c]+=1   
+      hashmap[c]+=1    
     
     return total
