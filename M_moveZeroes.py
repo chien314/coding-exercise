@@ -2,7 +2,7 @@
 # SC:O(1)
 
 class Solution: 
-    def moveZeroes(self, nums):
+    def moveZeroes(self, nums): 
         """
         Do not return anything, modify nums in-place instead.
         """
