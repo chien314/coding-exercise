@@ -8,7 +8,7 @@ def MWS(s,t):
     for j,c in enumerate(s,1):
         lent -= dic[c] > 0    # if dic[c]>0: lent-=1
                 dic[c]-=1
-          
+           
         if lent == 0:
             while dic[s[i]]<0:  # i<j?
                 dic[s[i]]+=1
