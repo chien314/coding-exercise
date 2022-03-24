@@ -6,7 +6,7 @@ def getMilestoneDays(revenues, milestones):
     i,j=-1,len(nums)
     
     while j-i >= 2 :
-      mid=(i+j)//2
+      mid=(i+j)//2 
       if nums[mid] < tar:
         i = mid
       else:
