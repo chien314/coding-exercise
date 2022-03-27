@@ -1,3 +1,5 @@
+# TC:O(n)
+# SC:O(1)
 class Solution:
     def findBuildings(self, heights: List[int]) -> List[int]:
         mx=heights[-1]
