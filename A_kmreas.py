@@ -2,3 +2,4 @@
 # k: k clusters
 
 def (array, k):
+ 
