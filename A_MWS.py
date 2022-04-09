@@ -2,7 +2,7 @@
 # TC:O(max(m,n)), where m=len(s) and n=len(t)
 # SC:O(max(m,n))
 from collections import Counter
-def MWS(s,t):
+def MWS(s,t): 
     lent, dic = len(t), Counter(t)
     I=J=i=0
     for j,c in enumerate(s,1):
