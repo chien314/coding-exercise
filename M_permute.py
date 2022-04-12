@@ -5,7 +5,7 @@ class Solution:
     res=[]
     def bt(first):
            
-       if first ==len(nums):
+       if first ==len(nums): 
           res.append(nums.copy())
 
        for i in range(first, len(nums)):
