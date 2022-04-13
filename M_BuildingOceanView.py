@@ -8,4 +8,4 @@ class Solution:
             if heights[i]>mx:
                 res.append(i)
                 mx=heights[i]
-        return res[::-1]
+        return res[::-1] 
